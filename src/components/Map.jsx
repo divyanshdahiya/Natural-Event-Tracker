@@ -55,7 +55,6 @@ const Map = ({ eventData, center, zoom }) => {
         defaultZoom={zoom}
       >
         {markers}
-        <LocationMarkFire lat={center.lat} lng={center.lng} />
       </GoogleMapReact>
       {locationInfo && <LocationInfoBox info={locationInfo} />}
     </div>
@@ -64,10 +63,10 @@ const Map = ({ eventData, center, zoom }) => {
 
 Map.defaultProps = {
   center: {
-    lat: 42.3265,
-    lng: -122.8756,
+    lat: -19.7669,
+    lng: 44.8691,
   },
-  zoom: 6,
+  zoom: 1,
 };
 
 export default Map;
