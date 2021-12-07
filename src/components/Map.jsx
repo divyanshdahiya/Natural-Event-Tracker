@@ -1,8 +1,10 @@
 import React from "react";
 import { useState } from "react";
 import GoogleMapReact from "google-map-react";
-import LocationMark from "./LocationMark";
+import LocationMarkFire from "./LocationMarkFire";
 import LocationInfoBox from "./LocationInfoBox";
+import LocationMarkVolcano from "./LocationMarkVolcano";
+import LocationMarkIceberg from "./LocationMarkIceberg";
 
 const Map = ({ eventData, center, zoom }) => {
   const [locationInfo, setLocationInfo] = useState(null);
@@ -10,7 +12,29 @@ const Map = ({ eventData, center, zoom }) => {
   const markers = eventData.map((ev, index) => {
     if (ev.categories[0].id === 8) {
       return (
-        <LocationMark
+        <LocationMarkFire
+          key={index}
+          lat={ev.geometries[0].coordinates[1]}
+          lng={ev.geometries[0].coordinates[0]}
+          onClick={() =>
+            setLocationInfo({ id: ev.categories[0].title, title: ev.title })
+          }
+        />
+      );
+    } else if (ev.categories[0].id === 12) {
+      return (
+        <LocationMarkVolcano
+          key={index}
+          lat={ev.geometries[0].coordinates[1]}
+          lng={ev.geometries[0].coordinates[0]}
+          onClick={() =>
+            setLocationInfo({ id: ev.categories[0].title, title: ev.title })
+          }
+        />
+      );
+    } else if (ev.categories[0].id === 15) {
+      return (
+        <LocationMarkIceberg
           key={index}
           lat={ev.geometries[0].coordinates[1]}
           lng={ev.geometries[0].coordinates[0]}
@@ -31,7 +55,7 @@ const Map = ({ eventData, center, zoom }) => {
         defaultZoom={zoom}
       >
         {markers}
-        <LocationMark lat={center.lat} lng={center.lng} />
+        <LocationMarkFire lat={center.lat} lng={center.lng} />
       </GoogleMapReact>
       {locationInfo && <LocationInfoBox info={locationInfo} />}
     </div>

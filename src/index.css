@@ -61,3 +61,22 @@ body {
 .location-info li {
   padding: 5px 0;
 }
+.icon-info {
+  z-index: 100;
+  position: absolute;
+  bottom: 60px;
+  left: 10px;
+  min-height: 200px;
+  padding: 20px;
+  background-color: rgba(0, 0, 0, 0.6);
+  color: white;
+  border-radius: 18px;
+  font-size: 19px;
+}
+.icon-info ul li {
+  display: flex;
+  align-items: center;
+  list-style: none;
+  margin-left: -45px;
+  line-height: 1px;
+}
