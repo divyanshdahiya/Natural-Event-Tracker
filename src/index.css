@@ -80,3 +80,25 @@ body {
   margin-left: -45px;
   line-height: 1px;
 }
+
+@media screen and (max-width: 500px) {
+  .icon-info {
+    min-height: 50px;
+    font-size: 10px;
+    bottom: 30px;
+    padding: 10px;
+  }
+  .location-info {
+    top: 620px;
+    right: 10px;
+    max-height: 10px;
+    min-height: 140px;
+    max-width: 210px;
+    min-width: 210px;
+    padding: 10px;
+    background-color: rgba(0, 0, 0, 0.6);
+    color: white;
+    border-radius: 18px;
+    font-size: 11px;
+  }
+}
