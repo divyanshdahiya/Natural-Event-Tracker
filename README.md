@@ -1,4 +1,4 @@
-![alt text](screenshot.png)
+<img src="screenshot.PNG" alt="MarineGEO circle logo" style="height: 100px; width:100px;"/>
 
 # Getting Started with Create React App
 
