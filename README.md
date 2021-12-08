@@ -1,4 +1,4 @@
-<img src="screenshot.PNG" alt="Website Preview" style="height: 500px; width:1000px;"/>
+<img src="screenshot.PNG" alt="Website Preview"/>
 
 # Getting Started with Create React App
 
